@@ -16,13 +16,13 @@ namespace Application.Features.Technologies.Commands
     {
         public int Id { get; set; }
 
-        public class CreateTechnologyCommandHandler : IRequestHandler<DeleteTechnologyCommand, DeletedTechnologyDto>
+        public class DeleteTechnologyCommandHandler : IRequestHandler<DeleteTechnologyCommand, DeletedTechnologyDto>
         {
             private readonly ITechnologyRepository _technologyRepository;
             private readonly IMapper _mapper;
             private readonly TechnologyBusinessRules _technologyBusinessRules;
 
-            public CreateTechnologyCommandHandler(ITechnologyRepository technologyRepository, IMapper mapper, TechnologyBusinessRules technologyBusinessRules)
+            public DeleteTechnologyCommandHandler(ITechnologyRepository technologyRepository, IMapper mapper, TechnologyBusinessRules technologyBusinessRules)
             {
                 _technologyRepository = technologyRepository;
                 _mapper = mapper;
